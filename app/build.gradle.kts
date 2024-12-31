@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.adminbibliotecaapp"
-    compileSdk = 33
+    namespace = "com.example.loginapp"
+    compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.adminbibliotecaapp"
-        minSdk = 23
-        targetSdk = 33
+        applicationId = "com.example.loginapp"
+        minSdk = 24
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -22,10 +22,6 @@ android {
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
-
-    buildFeatures{
-        viewBinding = true
-    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -35,20 +31,10 @@ android {
 dependencies {
 
     implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.9.0")
+    implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-
-    //GLIDE
-    implementation("com.github.bumptech.glide:glide:4.13.0")
-    //RETROFIT
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.google.code.gson:gson:2.9.1")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-
-    //Toasty
-    implementation("com.github.GrenderG:Toasty:1.5.2")
-
+    implementation("com.android.volley:volley:1.2.1")
 }
